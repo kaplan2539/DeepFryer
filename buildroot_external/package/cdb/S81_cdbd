@@ -1,0 +1,32 @@
+#!/bin/sh
+RETVAL=0
+
+start() {
+    start-stop-daemon -S -q -m -b -p /var/run/cdbd.pid --exec /usr/bin/cdbd 2>&1 | logger -t cdbd &
+}
+
+stop() {
+    start-stop-daemon -K -q -p /var/run/cdbd.pid
+}
+
+
+case "$1" in
+        start)
+                start
+                ;;
+        stop)
+                stop
+                ;;
+        status)
+                status $processname
+                RETVAL=$?
+                ;;
+        restart)
+                stop
+                start
+                ;;
+        *)
+                echo "Usage: $0 {start|stop|status|restart}"
+                ;;
+esac
+exit $RETVAL

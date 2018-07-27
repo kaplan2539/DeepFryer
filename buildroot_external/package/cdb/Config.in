@@ -1,0 +1,7 @@
+config BR2_PACKAGE_CDB
+	bool "CHIP debugging bridge (CDB)"
+	depends on BR2_PACKAGE_HOST_GO_ARCH_SUPPORTS
+	help
+	  Allows for remote control.
+
+	  https://github.com/nextthingco/cdb
