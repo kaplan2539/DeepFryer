@@ -4,3 +4,6 @@
 [submodule "chip-nand-scripts"]
 	path = chip-nand-scripts
 	url = git@github.com:/kaplan2539/chip-nand-scripts
+[submodule "CHIP-u-boot"]
+	path = CHIP-u-boot
+	url = git@github.com:/kaplan2539/CHIP-u-boot
