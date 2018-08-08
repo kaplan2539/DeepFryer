@@ -1,3 +1,5 @@
 source "$BR2_EXTERNAL_DEEPFRY_PATH/package/chip-mtd-utils/Config.in"
 source "$BR2_EXTERNAL_DEEPFRY_PATH/package/gadget-init-scripts/Config.in"
 source "$BR2_EXTERNAL_DEEPFRY_PATH/package/cdb/Config.in"
+source "$BR2_EXTERNAL_DEEPFRY_PATH/package/CHIP-uboot/Config.in"
+source "$BR2_EXTERNAL_DEEPFRY_PATH/package/chip-nand-scripts/Config.in.host"

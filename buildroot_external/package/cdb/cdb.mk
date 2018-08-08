@@ -34,8 +34,8 @@ CDB_MAKE_ENV = $(HOST_GO_TARGET_ENV) \
 define CDB_BUILD_CMDS
 		echo "CDB_GIT_BRANCH=$(CDB_GIT_BRANCH)"
 		echo "CDB_GIT_COMMIT=$(CDB_GIT_COMMIT)"
-        $(MAKE) clean
-#        $(CDB_MAKE_ENV) $(MAKE) -C $(@D) get
+        $(CDB_MAKE_ENV) $(MAKE) -C $(@D) clean
+        $(CDB_MAKE_ENV) $(MAKE) -C $(@D) get
         $(CDB_MAKE_ENV) $(MAKE) -C $(@D) cdbd
 endef
 
